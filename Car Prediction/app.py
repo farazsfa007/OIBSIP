@@ -1,12 +1,17 @@
 import streamlit as st
+import time
+
+with st.spinner('Wait for it...'):
+    time.sleep(5)
+st.success('Done!')
 
 sidebar = st.sidebar
 
 sidebar.title("Sidebar Title Here")
-btn1 = sidebar.button("Get Balloons")
+btn1 = sidebar.button("Get Snow")
 
 if btn1:
-    st.balloons()
+    st.snow()
 
 st.title("Car Price Prediction")
 name = st.text_input("Enter Car model")
